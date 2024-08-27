@@ -15,8 +15,8 @@ def read_one_res(
     mrna_only=False,
     method=None,
     subset=None,
-    top_folder=tool_sys.get_work_folder() + "sim_iddn_data",
-    top_folder_R=tool_sys.get_work_folder() + "sim_iddn_data",
+    top_folder=tool_sys.get_work_folder(),
+    top_folder_R=tool_sys.get_work_folder(),
 ):
     # Ground truth iddn_data
     dat_file = f"{top_folder}/sim_input/{exp_name}.hdf5"
