@@ -1,12 +1,17 @@
+"""
+Generation of the synthetic networks
+"""
+
 import numpy as np
 from scipy.stats import powerlaw
 from ddn3 import simulation
 from ddn3_extra import simulation_r
 
 
-################
-# GGM without explicit translation
-################
+#####################################
+# GGM with different number of layers
+# Do not have  explicit translation
+#####################################
 
 
 def toy_two_layer(
@@ -398,9 +403,9 @@ def post_process(
     return dat1, dat2, con_mat1, con_mat2, comm_gt, diff_gt, omega1, omega2
 
 
-################
+#################################
 # Model with explicit translation
-################
+#################################
 
 
 def toy_example():

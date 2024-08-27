@@ -1,3 +1,7 @@
+"""
+Find the path of simulation input and output data
+"""
+
 from pathlib import Path
 
 

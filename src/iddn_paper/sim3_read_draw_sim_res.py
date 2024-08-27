@@ -1,3 +1,7 @@
+"""
+Read the simulation results and make figures
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from iddn_paper import sim3_h5op, tool_draw, tool_sys, tool_eval

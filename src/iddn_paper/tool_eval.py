@@ -1,3 +1,7 @@
+"""
+Extract simulation results and calculate errors
+"""
+
 import numpy as np
 import h5py
 from ddn3 import tools, performance

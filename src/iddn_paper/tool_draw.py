@@ -1,3 +1,7 @@
+"""
+Draw line plots for iDDN paper
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 

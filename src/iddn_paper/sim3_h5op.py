@@ -1,3 +1,7 @@
+"""
+Read and write Synthetic data from and to HDF5.
+"""
+
 import numpy as np
 import h5py
 from ddn3 import tools as tt
@@ -17,6 +21,7 @@ def make_new_sim_data(
     mol_names=None,
     layer_count=None,
 ):
+    """Save the generated synthetic data to HDF5 file"""
     n_feature = dat1.shape[1]
 
     if dep_mat_null is None:
@@ -50,6 +55,7 @@ def make_new_sim_data(
 
 
 def read_sim_data(dat_file, out="tuple"):
+    """Load the synthetic data from HDF5 file"""
     f = h5py.File(dat_file, "r")
     dat1 = np.array(f["dat1"])
     dat2 = np.array(f["dat2"])

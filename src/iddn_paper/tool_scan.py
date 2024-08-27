@@ -1,3 +1,7 @@
+"""
+Tools for running simulations for iDDN and DDN3.0 using different hyper-parameters
+"""
+
 import numpy as np
 from ddn3 import ddn
 from iddn import iddn
