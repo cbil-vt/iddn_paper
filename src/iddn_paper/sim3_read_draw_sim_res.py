@@ -15,8 +15,8 @@ def read_one_res(
     mrna_only=False,
     method=None,
     subset=None,
-    top_folder=tool_sys.get_work_folder(),
-    top_folder_R=tool_sys.get_work_folder(),
+    top_folder=None,
+    top_folder_R=None,
 ):
     # Ground truth iddn_data
     dat_file = f"{top_folder}/sim_input/{exp_name}.hdf5"
@@ -172,7 +172,7 @@ def draw_F1_pROC_curves_for_methods(
         xrange,
         title="F1 of CDN",
         ax=ax[1, 0],
-        xlabel="$\lambda_1$",
+        xlabel=r"$\lambda_1$",
         ylabel="$F_1$",
         xlim=xlim_1d,
         ylim=ylim_1d,
@@ -183,7 +183,7 @@ def draw_F1_pROC_curves_for_methods(
         xrange,
         title="F1 of DDN",
         ax=ax[0, 0],
-        xlabel="$\lambda_1$",
+        xlabel=r"$\lambda_1$",
         ylabel="$F_1$",
         xlim=xlim_1d,
         ylim=ylim_1d,
@@ -194,10 +194,12 @@ def draw_F1_pROC_curves_for_methods(
         xrange,
         title="Average F1",
         ax=ax[0, 1],
-        xlabel="$\lambda_1$",
+        xlabel=r"$\lambda_1$",
         ylabel="$F_1$",
         xlim=xlim_1d,
         ylim=ylim_1d,
     )
 
-    return fig
+    res = [tpfp_cdn_lst, f1_cdn_lst, f1_ddn_lst, f1_avg_lst]
+
+    return fig, res
